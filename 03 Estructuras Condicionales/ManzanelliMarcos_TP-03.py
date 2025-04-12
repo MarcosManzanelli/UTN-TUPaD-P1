@@ -116,3 +116,90 @@
 # pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
 # pantalla.
 
+# frase = input("Ingrese una frase o palabra. ")
+# vocal = ["a", "e", "i", "o", "u"]
+# if frase[-1] in vocal :
+#     print(f"{frase}!")
+# else:
+#     print(f"{frase}")
+
+# 8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3
+# dependiendo de la opción que desee:
+# 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
+# 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
+# 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.
+# El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el
+# usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(),
+# lower() y title() de Python para convertir entre mayúsculas y minúsculas.
+
+# nombre = input("Ingrese su nombre. ")
+# opcion = int(input("1. Nombre en mayúsculas.\n2. Nombre en minúsculas.\n3. La primer letra mayúscula.\nSeleccione una opción: "))
+
+# if opcion == 1 :
+#     nombremayus = nombre.upper()
+#     print(f"{nombremayus}")
+# elif opcion == 2 :
+#     nombremin = nombre.lower()
+#     print(f"{nombremin}")
+# elif opcion == 3 :
+#     nombreprimayus = nombre.title()
+#     print(f"{nombreprimayus}")
+# else:
+#     pass
+
+# 9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la
+# magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado
+# por pantalla:
+# ● Menor que 3: "Muy leve" (imperceptible).
+# ● Mayor o igual que 3 y menor que 4: "Leve" (ligeramente perceptible).
+# ● Mayor o igual que 4 y menor que 5: "Moderado" (sentido por personas, pero
+# generalmente no causa daños).
+# ● Mayor o igual que 5 y menor que 6: "Fuerte" (puede causar daños en estructuras
+# débiles).
+# ● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
+# ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+# magnitud = int(input("Ingrese la magnitud del terremoto: "))
+
+# if magnitud < 3 :
+#     print("Muy leve (imperceptible).")
+# elif magnitud >= 3 and magnitud < 4 :
+#     print("Leve (ligeramente perceptible).")
+# elif magnitud >= 4 and magnitud < 5 :
+#     print("Moderado (sentido por personas, pero generalmente no causa daños).")
+# elif magnitud >= 5 and magnitud < 6 :
+#     print("Fuerte (puede causar daños en estructuras débiles).")
+# elif magnitud >= 6 and magnitud < 7 :
+#     print("Muy Fuerte (puede causar daños significativos).")
+# elif magnitud >= 7 :
+#     print("Extremo (puede causar graves daños a gran escala).")
+# else:
+#     pass
+
+# 10) Utilizando la información aportada en la siguiente tabla sobre las estaciones del año
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
+# del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
+# si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+hemisferioUsuario = input("¿Se encuentra en el hemisferio norte o sur?")
+mesUsuario = int(input("Ingrese el mes(En números). "))
+diaUsuario = int(input("Ingrese el día. "))
+
+if hemisferioUsuario == "Norte" :
+    if (mesUsuario == 1 or mesUsuario == 2) or (mesUsuario == 12 and diaUsuario > 21) or (mesUsuario == 3 and diaUsuario <= 21) :
+        print("Se encuentra en invierno.")
+    elif (mesUsuario == 4 or mesUsuario == 5) or (mesUsuario == 3 and diaUsuario > 21) or (mesUsuario == 6 and diaUsuario <= 21) :
+        print("Se encuentra en primavera.")
+    elif (mesUsuario == 7 or mesUsuario == 8) or (mesUsuario == 6 and diaUsuario > 21) or (mesUsuario == 9 and diaUsuario <= 21) :
+        print("Se encuentra en verano.")
+    elif (mesUsuario == 10 or mesUsuario == 11) or (mesUsuario == 9 and diaUsuario > 21) or (mesUsuario == 12 and diaUsuario <= 21) :
+        print("Se encuentra en otoño.")
+elif hemisferioUsuario == "Sur" :
+    if (mesUsuario == 1 or mesUsuario == 2) or (mesUsuario == 12 and diaUsuario > 21) or (mesUsuario == 3 and diaUsuario <= 21) :
+        print("Se encuentra en verano.")
+    elif (mesUsuario == 4 or mesUsuario == 5) or (mesUsuario == 3 and diaUsuario > 21) or (mesUsuario == 6 and diaUsuario <= 21) :
+        print("Se encuentra en otoño.")
+    elif (mesUsuario == 7 or mesUsuario == 8) or (mesUsuario == 6 and diaUsuario > 21) or (mesUsuario == 9 and diaUsuario <= 21) :
+        print("Se encuentra en invierno.")
+    elif (mesUsuario == 10 or mesUsuario == 11) or (mesUsuario == 9 and diaUsuario > 21) or (mesUsuario == 12 and diaUsuario <= 21) :
+        print("Se encuentra en primavera.")
