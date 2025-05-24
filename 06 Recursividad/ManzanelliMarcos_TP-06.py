@@ -118,12 +118,12 @@
 # contar_digito(5555, 5) → 4
 # contar_digito(123456, 7) → 0
 
-def contar_digito(numero, digito):
-    if numero == 0:
-        return 0
-    else:
-        if digito == numero % 10:
-            return contar_digito(numero // 10, digito) + 1
-        else:
-            return contar_digito(numero // 10, digito)
-print(contar_digito(10100001, 1))
+# def contar_digito(numero, digito):
+#     if numero == 0:
+#         return 0
+#     else:
+#         if digito == numero % 10:
+#             return contar_digito(numero // 10, digito) + 1
+#         else:
+#             return contar_digito(numero // 10, digito)
+# print(contar_digito(10100001, 1))
